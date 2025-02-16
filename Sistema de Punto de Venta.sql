@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS `Clientes` (
 	`codigo_postal` int NOT NULL,
 	`telefono` varchar(15) NOT NULL,
 	`fecha_registro` datetime NOT NULL,
-	`nombre_usuario` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_cliente`)
 );
 
@@ -68,21 +67,6 @@ CREATE TABLE IF NOT EXISTS `roles` (
 	PRIMARY KEY (`id_rol`)
 );
 
-CREATE TABLE IF NOT EXISTS `Tipos_Venta` (
-	`id_tipo_venta` int AUTO_INCREMENT NOT NULL UNIQUE,
-	`nombre_tipo` varchar(50) NOT NULL,
-	PRIMARY KEY (`id_tipo_venta`)
-);
-
-CREATE TABLE IF NOT EXISTS `detalles_ventas` (
-	`id_detalle` int AUTO_INCREMENT NOT NULL UNIQUE,
-	`id_venta` int NOT NULL,
-	`id_producto` int NOT NULL,
-	`cantidad` int NOT NULL,
-	`precio_unitario` decimal(10,2) NOT NULL,
-	PRIMARY KEY (`id_detalle`)
-);
-
 CREATE TABLE IF NOT EXISTS `detalle_tickets` (
 	`id_detalle_ticket` int AUTO_INCREMENT NOT NULL UNIQUE,
 	`id_ticket` int NOT NULL,
@@ -94,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `detalle_tickets` (
 );
 
 ALTER TABLE `Usuarios` ADD CONSTRAINT `Usuarios_fk3` FOREIGN KEY (`id_rol`) REFERENCES `roles`(`id_rol`);
-ALTER TABLE `Clientes` ADD CONSTRAINT `Clientes_fk12` FOREIGN KEY (`nombre_usuario`) REFERENCES `Usuarios`(`nombre_usuario`);
+
 
 ALTER TABLE `Ventas` ADD CONSTRAINT `Ventas_fk1` FOREIGN KEY (`id_cliente`) REFERENCES `Clientes`(`id_cliente`);
 
@@ -106,10 +90,6 @@ ALTER TABLE `Pagos` ADD CONSTRAINT `Pagos_fk2` FOREIGN KEY (`id_estado_pago`) RE
 
 ALTER TABLE `Pagos` ADD CONSTRAINT `Pagos_fk4` FOREIGN KEY (`monto_total`) REFERENCES `Ventas`(`monto_total`);
 
-
-ALTER TABLE `detalles_ventas` ADD CONSTRAINT `detalles_ventas_fk1` FOREIGN KEY (`id_venta`) REFERENCES `Ventas`(`id_venta`);
-
-ALTER TABLE `detalles_ventas` ADD CONSTRAINT `detalles_ventas_fk2` FOREIGN KEY (`id_producto`) REFERENCES `Productos`(`id_producto`);
 ALTER TABLE `detalle_tickets` ADD CONSTRAINT `detalle_tickets_fk1` FOREIGN KEY (`id_ticket`) REFERENCES `ticket`(`id_ticket`);
 
 ALTER TABLE `detalle_tickets` ADD CONSTRAINT `detalle_tickets_fk2` FOREIGN KEY (`id_producto`) REFERENCES `Productos`(`id_producto`);
