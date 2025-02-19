@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `Clientes` (
 	`numero_interior` int NOT NULL,
 	`codigo_postal` int NOT NULL,
 	`telefono` varchar(15) NOT NULL,
+	`correo_electronico` varchar(100) NOT NULL,
 	`fecha_registro` datetime NOT NULL,
 	PRIMARY KEY (`id_cliente`)
 );
