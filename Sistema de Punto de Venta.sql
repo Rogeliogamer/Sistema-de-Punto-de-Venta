@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `Clientes` (
 	`apellido_paterno` varchar(100) NOT NULL,
 	`apellido_materno` varchar(100) NOT NULL,
 	`estado` varchar(255) NOT NULL,
+	`municipio` varchar(255) NOT NULL,
 	`colonia` varchar(255) NOT NULL,
 	`calle` varchar(255) NOT NULL,
 	`numero_exterior` int NOT NULL,
