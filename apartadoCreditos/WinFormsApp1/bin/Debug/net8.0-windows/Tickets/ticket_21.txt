@@ -1,0 +1,13 @@
+=== Ticket de Venta ===
+ID Ticket: 21
+Fecha: 26/02/2025 07:28:04 p. m.
+Monto Total (IVA incluido): $3300.00
+
+=== Productos ===
+ID Producto: 38
+Nombre: Perfume Coco Mademoiselle
+Descripción: Fragancia fresca y juvenil
+Cantidad: 1
+Precio Unitario: $3000.00
+Subtotal: $3000.00
+

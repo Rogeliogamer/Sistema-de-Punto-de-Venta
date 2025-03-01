@@ -1,0 +1,20 @@
+=== Ticket de Venta ===
+ID Ticket: 22
+Fecha: 27/02/2025 09:06:28 a. m.
+Monto Total (IVA incluido): $4730.00
+
+=== Productos ===
+ID Producto: 48
+Nombre: Perfume Versace Dylan Blue
+Descripción: Fragancia moderna y vibrante
+Cantidad: 1
+Precio Unitario: $2100.00
+Subtotal: $2100.00
+
+ID Producto: 10
+Nombre: Perfume Bleu de Chanel
+Descripción: Aroma amaderado y elegante
+Cantidad: 1
+Precio Unitario: $2200.00
+Subtotal: $2200.00
+
