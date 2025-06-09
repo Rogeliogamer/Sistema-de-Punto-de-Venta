@@ -1,0 +1,1 @@
+C:\Users\rogel\OneDrive\Escritorio\Semestre 10\Programación En Ambientes Distribuidos\Sistema de Punto de Venta\Sistema de Punto de Venta\obj\Debug\Perfumeria.csproj.AssemblyReference.cache
